@@ -1,0 +1,84 @@
+<div class="row">
+    <div class="col-4 cls-sm-12 hvr-pulse-grow" *ngFor="let product of newProducts">
+        <a href="" onclick="return false;" (click)="changeSelected(product) ">
+            <img src="assets/img/{{product.image}}" class="round" width="200px;" alt="" data-toggle="modal" data-target="#detailModal">
+
+        </a>
+        <div class="product-icon"><img src="assets/img/{{product.icon}}" alt="" width="30px"></div>
+
+    </div>
+
+
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="detailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">{{selectedProduct.text}}</h4>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+            </div>
+            <div class="modal-body row">
+                <div class="col-sm-8">
+                    <img src="./assets/img/{{selectedProduct.image}}" alt="" width="100%">
+
+                </div>
+                <div class="col-sm-4">
+                    <h4 class="col-sm-4">${{selectedProduct.price}}</h4>
+                    <p>{{selectedProduct.description}}</p>
+
+                </div>
+
+            </div>
+            <div class=" modal-footer ">
+                <span>total productos={{cart.length}}</span>
+                <button type="button " class="btn btn-primary " (click)="addToCart(selectedProduct)">Agregar a la lista de compras</button>
+                <button type="button" class="btn btn-secondary" onclick="$('#sidebar').toggleClass('active')" data-toggle="modal" data-target="#detailModal">Terminar Compra</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modalCompras" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">total productos=cantidad productos</h4>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+
+                <!--   <div class="row" ng-repeat="compra in skull.cart track by $index">
+
+                    <div class="col-sm-2">
+                        <img src="{{compra.image}}" alt="" width="100%" class="rounded-circle">
+                    </div>
+                    <div class="col-sm-6">
+                        <h4 class="col-sm-4"> {{compra.text}}</h4>
+                        <p>{{compra.description}}</p>
+
+                    </div>
+                    <div class="col-sm-4">
+                        <h3>$
+                            <span class="badge badge-secondary">{{compra.price}} </span>
+                        </h3>
+                    </div>
+                </div>-->
+
+
+            </div>
+            <div class=" modal-footer ">
+                <button type="button" class="btn btn-primary" ng-click="skull.finalPurchase()">Terminar Compra</button>
+            </div>
+        </div>
+    </div>
+</div>
