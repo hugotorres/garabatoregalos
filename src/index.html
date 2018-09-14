@@ -10,128 +10,13 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="/css/style.css">-->
+     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <title>Garabato Regalos</title>
     <style>
-        .product-icon {
-            filter: invert(80);
-            transition: 2s;
-            text-align: left;
-            margin-top: -100px;
-        }
-        
-        .product-icon:hover {
-            filter: invert(100);
-            margin-top: -120px;
-        }
-        
-        img {
-            border-radius: 50%;
-        }
-        
-        .real-content {}
-        
-        body {
-            color: white !important;
-            font-family: 'Montserrat', sans-serif;
-        }
-        
-        a {
-            color: white;
-        }
-        
-        .initial-content {
-            display: block;
-            position: relative;
-        }
-        
-        .initial-content::after {
-            content: "";
-            background: url(assets/img/image1.jpg);
-            opacity: 0.1;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            position: absolute;
-            z-index: -1;
-        }
-        
-        .modal-content {
-            background: darkslategray;
-        }
-        
-        #sidebar {
-            min-width: 250px;
-            background: slategray;
-            padding: 20px;
-            height: 100vh;
-            overflow: auto;
-            display: none;
-            transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
-            transform-origin: center left;
-            /* Set the transformed position of sidebar to center left side. */
-        }
-        
-        #sidebar.active {
-            display: block !important;
-            width: 300px;
-            position: fixed;
-            height: 100vh;
-        }
-        
-        .col-4.cls-sm-12.hvr-pulse-grow {
-            min-height: 250px;
-        }
-        
-        .product-name {
-            margin-top: -30px;
-            color: slategrey;
-            text-shadow: lightgray;
-            background: black;
-            padding: 10px;
-        }
-        /* Pulse Grow */
-        
-        @-webkit-keyframes hvr-pulse-grow {
-            to {
-                -webkit-transform: scale(1.1);
-                transform: scale(1.1);
-            }
-        }
-        
-        @keyframes hvr-pulse-grow {
-            to {
-                -webkit-transform: scale(1.1);
-                transform: scale(1.1);
-            }
-        }
-        
-        .hvr-pulse-grow {
-            display: inline-block;
-            vertical-align: middle;
-            -webkit-transform: perspective(1px) translateZ(0);
-            transform: perspective(1px) translateZ(0);
-            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-        }
-        
-        .hvr-pulse-grow:hover,
-        .hvr-pulse-grow:focus,
-        .hvr-pulse-grow:active {
-            -webkit-animation-name: hvr-pulse-grow;
-            animation-name: hvr-pulse-grow;
-            -webkit-animation-duration: 0.3s;
-            animation-duration: 0.3s;
-            -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-            -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-            -webkit-animation-direction: alternate;
-            animation-direction: alternate;
-        }
+
     </style>
 
 </head>
